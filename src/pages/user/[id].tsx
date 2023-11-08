@@ -130,23 +130,10 @@ export default function UserPage() {
                     />
                     <MySelect
                         label='Roles'
-                        multiple={true}
                         rolesLista={rolesLista}
                         value={roles}
-                        defaultValue={roles}
-                        onChange={e => {
-                            let rolesArray : string[] = [];
-                            const options = [e.target.selectedOptions];
-                            const optionArray = options.map(option => option);
-                            
-                            optionArray.forEach(function (elemento, chave) {
-                                console.log('entoru no foreach' , elemento , chave);
-                                for (let index = 0; index < elemento.length; index++) {
-                                    const element = elemento[index];
-                                    console.log(element.value);
-                                    rolesArray.push(element.value);
-                                }
-                            });
+                        onSelect={(selectedOptions) => {
+                            const rolesArray = selectedOptions?.map((options) => options.value)
                             console.log('array roles ->',rolesArray);
                             setRoles(rolesArray);
                         }}
