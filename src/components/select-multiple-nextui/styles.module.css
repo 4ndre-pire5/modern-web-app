@@ -1,0 +1,19 @@
+.divInput{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom:100px;
+    margin-left: 140px;
+    min-width:100px;
+    box-sizing:content-box;
+  
+}
+
+.label{
+    font-size: 22px;
+    align-content: flex-start;
+}
+
+.input{
+    font-size: 22px;
+    padding: 5px;
+}
