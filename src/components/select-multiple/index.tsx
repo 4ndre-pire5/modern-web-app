@@ -1,4 +1,4 @@
-//import { DetailedHTMLProps, SelectHTMLAttributes } from 'react'
+import { DetailedHTMLProps, SelectHTMLAttributes } from 'react'
 import React from 'react'
 import Select from 'react-select'
 
@@ -23,11 +23,12 @@ import { Roles } from '@/model/roles';
 //     )
 // }
 
+
 interface Props {
     label: string;
     rolesLista: Roles[];
     value: string[];
-    onSelect: (selectedOptions: { value: string; label: string }[]) => void;
+    onChange: (selectedOptions: { value: string; label: string }[]) => void;
 }
 
 export default function SelectMultiple({ label, rolesLista, value }: Props) {
@@ -43,7 +44,7 @@ export default function SelectMultiple({ label, rolesLista, value }: Props) {
                 className={styles.input}
                 options={options}
                 isMulti={true}
-                value={options.filter((options) => value?.includes(options.value))}
+                value={options.filter((option) => value?.includes(option.value))}
             />
         </div>
     );

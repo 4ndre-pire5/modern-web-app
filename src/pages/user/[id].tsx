@@ -132,11 +132,12 @@ export default function UserPage() {
                         label='Roles'
                         rolesLista={rolesLista}
                         value={roles}
-                        onSelect={(selectedOptions) => {
-                            const rolesArray = selectedOptions?.map((options) => options.value)
-                            console.log('array roles ->',rolesArray);
+                        onChange={(selectedOptions) => {
+                            const rolesArray = selectedOptions.map((option) => option.value)
+                            console.log('array roles ->', rolesArray)
                             setRoles(rolesArray);
                         }}
+                        
                     />
                     <MyInput
                         label='Senha'

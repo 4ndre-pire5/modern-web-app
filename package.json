@@ -14,7 +14,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-multi-select-component": "^4.3.4",
-    "react-select": "^5.7.7"
+    "react-select": "^5.8.0"
   },
   "devDependencies": {
     "@types/node": "^20",
